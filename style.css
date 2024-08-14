@@ -44,6 +44,7 @@ div input[type=button] {
 
     cursor: pointer;
     transition: 0.2s;
+    outline: none;
 }
 
 .row .spec {
