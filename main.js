@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const buttons = document.querySelectorAll("input[type='button']");
 	const display = document.querySelector('#display');
 	let decimalFlag = false;
+    let completeFlag = false;
 
 	buttons.forEach(button => {
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			} else if (num == '=') {
 				display.value = eval(display.value);
+                completeFlag = true;
 
 			} else if (num == '.') {
 				if (decimalFlag == false) {
@@ -29,8 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 				if (button.className === 'spec') {
 					decimalFlag = false;
 				};
+                if (completeFlag === true) {
+                    display.value = "";
+                    display.value += num;
+                    completeFlag = false;
 
-				display.value += num;
+                } else {
+				    display.value += num;
+                }
 			};
 		});
 	});
