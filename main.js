@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	let decimalFlag = false;
     let completeFlag = false;
 	let operatorFlag = false;
-
+	
 	buttons.forEach(button => {
 
 		button.addEventListener('click', () => {
