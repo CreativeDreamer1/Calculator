@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				operatorFlag = true;
 
 			} else {
+				operatorFlag = false;
                 if (completeFlag === true) {
                     display.value = num;
                     completeFlag = false;
